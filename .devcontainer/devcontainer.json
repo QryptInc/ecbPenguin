@@ -1,0 +1,12 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {}
+	},
+	"postCreateCommand": "python3 -m pip install conan==1.60.1 && conan profile new --detect --force default && conan profile update settings.compiler.libcxx=libstdc++11 default && echo '\nUpdated default profile with correct CXX ABI' && conan profile show default"
+}
