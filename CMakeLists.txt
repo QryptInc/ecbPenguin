@@ -24,7 +24,9 @@ target_sources(${EXE_NAME} PRIVATE
     src/ecbencryptor.cpp
     src/evpwrapper.cpp
     src/bitmapreader.cpp
-    src/filewriter.cpp)
+    src/filewriter.cpp
+    src/onetimepad.cpp
+    src/qrngprocessor.cpp)
 
 target_include_directories(${EXE_NAME} PRIVATE 
     ${OpenSSL_INCLUDE_DIRS}

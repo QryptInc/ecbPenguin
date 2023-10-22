@@ -18,7 +18,11 @@ target_sources(${TEST_PROJECT} PRIVATE
     src/test_filewriter.cpp 
     ../src/filewriter.cpp
     src/test_evpwrapper.cpp
-    ../src/evpwrapper.cpp)
+    ../src/evpwrapper.cpp
+    src/test_otpencryptor.cpp
+    ../src/onetimepad.cpp
+    ../src/qrngprocessor.cpp
+    )
 
 target_include_directories(${TEST_PROJECT} PRIVATE 
     ${GTest_INCLUDE_DIRS}
